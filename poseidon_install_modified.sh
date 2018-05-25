@@ -8,7 +8,7 @@ COIN_CLI='poseidon-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://posq.io/POSQ_Linux.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='Poseidonquark'
+COIN_NAME='poseidonquark'
 COIN_PORT=5510
 RPC_PORT=5511
 

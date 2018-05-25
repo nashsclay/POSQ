@@ -9,8 +9,8 @@ COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://posq.io/POSQ_Linux.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='Poseidonquark'
-COIN_PORT=12698
-RPC_PORT=12699
+COIN_PORT=5510
+RPC_PORT=5511
 
 NODEIP=$(curl -s4 icanhazip.com)
 
@@ -124,10 +124,34 @@ maxconnections=256
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-addnode=178.62.13.226:12698
-addnode=8.9.5.48:12698
-addnode=144.205.57.173:12698
-addnode=138.68.176.127:12698
+addnode=192.243.103.201:5510
+addnode=192.243.103.202:5510
+addnode=80.111.218.44:5510
+addnode=192.243.101.179:5510
+addnode=192.243.100.6:5510
+addnode=192.243.100.65:5510
+addnode=192.243.102.48:5510
+addnode=165.227.226.176:5510
+addnode=159.89.19.161:5510
+addnode=185.248.140.13:5510
+addnode=84.200.24.120:5510
+addnode=37.228.224.37:5510
+addnode=91.39.113.78:5510
+addnode=196.52.39.22:5510
+addnode=140.82.61.65:5510
+addnode=91.39.113.78:5510
+addnode=63.140.89.8:5510
+addnode=203.220.144.229:5510
+addnode=216.117.128.40:5510
+addnode=18.222.88.154:5510
+addnode=173.30.75.11:5510
+addnode=110.232.112.81:5510
+addnode=85.15.190.106:5510
+addnode=82.142.153.162:5510
+addnode=45.77.148.21:5510
+addnode=173.239.218.20:5510
+addnode=159.65.20.209:5510
+addnode=172.245.185.184:5510
 EOF
 }
 

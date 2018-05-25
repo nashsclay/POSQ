@@ -1,14 +1,14 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='vyigrat.conf'
-CONFIGFOLDER='/root/.vyigrat'
-COIN_DAEMON='vyigratd'
-COIN_CLI='vyigrat-cli'
+CONFIG_FILE='poseidon.conf'
+CONFIGFOLDER='/root/.poseidon'
+COIN_DAEMON='poseidond'
+COIN_CLI='poseidon-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/vyigrat/vyigrat/releases/download/v1.0.0.0/vyigrat-ubuntu16.zip'
+COIN_TGZ='https://posq.io/POSQ_Linux.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='Vyigrat'
+COIN_NAME='Poseidonquark'
 COIN_PORT=12698
 RPC_PORT=12699
 
@@ -23,7 +23,7 @@ NC='\033[0m'
 function download_node() {
   echo -e "Prepare to download ${GREEN}$COIN_NAME${NC}."
   cd $TMP_FOLDER >/dev/null 2>&1
-  wget -q $COIN_TGZ
+  wget -q $COIN_TGZ --no-check-certificate
   compile_error
   unzip $COIN_ZIP >/dev/null 2>&1
   cd linux

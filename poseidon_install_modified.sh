@@ -26,7 +26,7 @@ function download_node() {
   wget -q $COIN_TGZ --no-check-certificate
   compile_error
   unzip $COIN_ZIP >/dev/null
-  cd linux
+  cd POSQ_Linux
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd ~ >/dev/null

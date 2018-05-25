@@ -30,6 +30,7 @@ function download_node() {
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd ~ >/dev/null
+  read -p "Press [Enter] key..."
   rm -rf $TMP_FOLDER >/dev/null
   clear
 }

@@ -6,7 +6,7 @@ CONFIGFOLDER='/root/.poseidon'
 COIN_DAEMON='poseidond'
 COIN_CLI='poseidon-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://posq.io/POSQ_Linux.zip'
+COIN_TGZ='https://posq.space/POSQ_1.3.1_Linux.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='poseidonquark'
 COIN_PORT=5510
@@ -26,7 +26,7 @@ function download_node() {
   wget -q $COIN_TGZ --no-check-certificate
   compile_error
   unzip $COIN_ZIP >/dev/null 2>&1
-  cd POSQ_Linux
+  cd 1.3.1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd ~ >/dev/null
@@ -240,6 +240,24 @@ fi
 clear
 }
 
+function create_swap() {
+ echo -e "Checking if swap space is needed."
+ PHYMEM=$(free -g|awk '/^Mem:/{print $2}')
+ SWAP=$(swapon -s)
+ if [[ "$PHYMEM" -lt "2"  &&  -z "$SWAP" ]]
+  then
+    echo -e "${GREEN}Server is running with less than 2G of RAM without SWAP, creating 2G swap file.${NC}"
+    SWAPFILE=$(mktemp)
+    dd if=/dev/zero of=$SWAPFILE bs=1024 count=2M
+    chmod 600 $SWAPFILE
+    mkswap $SWAPFILE
+    swapon -a $SWAPFILE
+ else
+  echo -e "${GREEN}The server running with at least 2G of RAM, or a SWAP file is already in place.${NC}"
+ fi
+ clear
+}
+
 function important_information() {
  echo -e "================================================================================================================================"
  echo -e "$COIN_NAME Masternode is up and running listening on port ${RED}$COIN_PORT${NC}."
@@ -273,5 +291,6 @@ clear
 
 checks
 prepare_system
+create_swap
 download_node
 setup_node

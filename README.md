@@ -66,7 +66,7 @@ NOTE: Don't click on the links as that will only show you code. There is no need
 
 You will need to copy and paste your masternode private key into putty when it asks. Then press Enter, when this is done, go back to your wallet, unlock your wallet in Settings. Once unlocked, start your masternode. Go to the Masternode tab, and try to start it, if it fails, try the command below in the NOTE. Once started go back to your VPS. type in
 
-`shmn-cli masternode status`
+`poseidon-cli masternode status`
 
 If it says, Masternode Successfully Started then congrats you are done!
 
@@ -80,22 +80,22 @@ This information will be very useful once your MN is setup and ready.
 
 Displays currention information about the masternode
 
-`shmn-cli getinfo`
+`poseidon-cli getinfo`
 
 
 You want to see status: "Masternode successfully started" and that will show your Masternode is ready to go.
 
-`shmn-cli masternode status`
+`poseidon-cli masternode status`
 
 
 Will stop your masternode and wil automatically restart
 
-`shmn-cli stop`
+`poseidon-cli stop`
 
 
 This will allow you to edit your masternode's wallet (not your computer's wallet). You can also you this command after the setup to fix if you input the incorrect MN key. Once open and done making changes, press Ctrl + o then Enter to save changes, then Ctrl + x to exit. Then run shmn-cli stop to restart the MN.
 
-`nano ~/.shmn/shmn.conf`
+`nano ~/.poseidon/poseidon.conf`
 
 
 This is where your StrongHands-Masternode program files is saved to
@@ -110,7 +110,7 @@ Return to root home folder
 
 This will give you access to the folder of StrongHands-Masternode files. Notice the period in front of the folder. If your are in the home folder and do **ls** command, it will not show the folder. Period means hidden. Correct command to display this folder in the home folder is **ls -al**
 
-`cd ~/.shmn`
+`cd ~/.poseidon`
 
 
 You can alway DM me on discord at nashsclay#6809

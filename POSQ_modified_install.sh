@@ -5,6 +5,7 @@ CONFIG_FILE='poseidon.conf'
 CONFIGFOLDER='/root/.poseidon'
 COIN_DAEMON='poseidond'
 COIN_CLI='poseidon-cli'
+COIN_TX='poseidon-tx'
 COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://github.com/nashsclay/POSQ/releases/download/v2.0/posq_mn_files.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
@@ -27,7 +28,7 @@ function download_node() {
   compile_error
   tar -zxvf $COIN_ZIP >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
-  cp $COIN_DAEMON $COIN_CLI $COIN_PATH
+  cp $COIN_DAEMON $COIN_CLI $COIN_TX $COIN_PATH
   cd ~ >/dev/null
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear

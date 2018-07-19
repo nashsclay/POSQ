@@ -8,7 +8,7 @@ echo
 
 cd ~
 
-wget https://github.com/nashsclay/Flexinodes/releases/download/v1.0.0.8/flex_1.0.0.8_update.tar.gz
+wget 
 sudo tar -xvf flex_1.0.0.8_update.tar.gz
 sudo mv -f flexinodes-cli /usr/local/bin
 sudo mv -f flexinodesd /usr/local/bin

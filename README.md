@@ -113,4 +113,4 @@ This will give you access to the folder of StrongHands-Masternode files. Notice 
 `cd ~/.poseidon`
 
 
-You can alway DM me on discord at nashsclay#6809
+You can alway DM me on discord at nashsclay#6809, please let me know in the DM what coin you need help with too.

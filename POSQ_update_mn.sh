@@ -16,10 +16,12 @@ sudo mv -f poseidon-tx /usr/local/bin
 sudo rm posq_mn_files.tar.gz
 echo "! Restarting POSQ Masternode !"
 cd ~/.poseidon
-sudo rm budget.dat db.log debug.log fee_estimates.dat flexinodesd.pid mnpayments.dat mncache.dat
+sudo rm db.log debug.log poseidond.pid
 sudo rm -R backups/
 sudo rm -R blocks/
 sudo rm -R chainstate/
 sudo rm -R database/
+sudo rm -R sporks/
+sudo rm -R zerocoin/
 sudo poseidon-cli stop
 echo "Masternode restarted"

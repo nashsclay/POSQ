@@ -8,18 +8,18 @@ echo
 
 cd ~
 
-wget 
-sudo tar -xvf flex_1.0.0.8_update.tar.gz
-sudo mv -f flexinodes-cli /usr/local/bin
-sudo mv -f flexinodesd /usr/local/bin
-sudo mv -f flexinodes-tx /usr/local/bin
-sudo rm flex_1.0.0.8_update.tar.gz
-echo "! Restarting Flexinodes Masternode !"
-cd ~/.flexinodes
+wget https://github.com/nashsclay/POSQ/releases/download/v2.0/posq_mn_files.tar.gz
+sudo tar -xvf posq_mn_files.tar.gz
+sudo mv -f poseidon-cli /usr/local/bin
+sudo mv -f poseidond /usr/local/bin
+sudo mv -f poseidon-tx /usr/local/bin
+sudo rm posq_mn_files.tar.gz
+echo "! Restarting POSQ Masternode !"
+cd ~/.poseidon
 sudo rm budget.dat db.log debug.log fee_estimates.dat flexinodesd.pid mnpayments.dat mncache.dat
 sudo rm -R backups/
 sudo rm -R blocks/
 sudo rm -R chainstate/
 sudo rm -R database/
-sudo flexinodes-cli stop
+sudo poseidon-cli stop
 echo "Masternode restarted"

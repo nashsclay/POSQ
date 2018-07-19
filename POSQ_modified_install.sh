@@ -6,7 +6,7 @@ CONFIGFOLDER='/root/.poseidon'
 COIN_DAEMON='poseidond'
 COIN_CLI='poseidon-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://posq.space/POSQ_1.3.1_Linux.zip'
+COIN_TGZ='https://github.com/nashsclay/POSQ/releases/download/v2.0/posq_mn_files.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='poseidonquark'
 COIN_PORT=5510
@@ -25,8 +25,7 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ --no-check-certificate
   compile_error
-  unzip $COIN_ZIP >/dev/null 2>&1
-  cd 1.3.1
+  tar -zxvf $COIN_ZIP >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd ~ >/dev/null

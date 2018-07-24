@@ -1,11 +1,11 @@
-# Poseidon-Masternode Setup (POSQ) **DOCUMENTATION IN WORK!**
+# Poseidon Quark-Masternode Setup (POSQ)
 
 If you just want the commands for VPS setup:  
 `wget https://raw.githubusercontent.com/nashsclay/POSQ/master/POSQ_modified_install.sh`  
 `chmod +x POSQ_modified_install.sh`  
 `./POSQ_modified_install.sh`  
 
-This StrongHands-Master (MN) script will automatically install almost all of the MN for you. You just need to have your masternode genkey ready. This code comes from Zoldurs many many forks for MN scripts, visit his page here. https://github.com/zoldur  
+This Poseidon Quark-Masternode (MN) script will automatically install almost all of the MN for you. You just need to have your masternode genkey ready. This code comes from Zoldurs many many forks for MN scripts, visit his page here. https://github.com/zoldur  
 
 Please note to run this script you MUST:  
 
@@ -19,7 +19,7 @@ Do note that this script does enable the MN to restart if it is somehow closed. 
 
 ## Setup Wallet on Local Computer
 
-Download the newest wallet for your computer here: https://www.stronghands.info/masternodes/
+Download the newest wallet for your computer here: https://posq.space/#downloads
 
 Once downloaded run the wallet and allow it to fully sync (nodes are hardcoded in the wallet)
 Once fully synced, encrypt your wallet. You can do this by selecting Settings --> Encrypt Wallet. Follow the prompts, also keeping your passphrase safe! This will allow you to send coins and make changes. Do NOT loose this passphrase. Once the wallet closes, give it a few minutes to finish encrypting (nothing will show) and restart the wallet.
@@ -37,7 +37,7 @@ This is your MN private key. Keep this safe but close by as you will need it for
 
 Now it's time to transfer your coins to your MN1 address. Go to Send. Then go to Inputs and select the coins you wish the wallet to choose from to send to your MN1 address. After you chose those coins, press ok. Go to Receive tab and double click on the MN1 below on that screen. Your address should appear. Copy this address and paste it on the Send screen and if done correctly the name of your MN should appear in the label box.
 
-Next type in the amount of coins you wish to send to your MN (this coin should be 1000 SHMN. NO more NO less). Once done, click Send
+Next type in the amount of coins you wish to send to your MN (this coin should be 10000 POSQ. NO more NO less). Once done, click Send
 
 Once sent, please allow the transaction to FULLY confirm. You can see this by looking at the Transactions tab. Once your coins fully confirm you need to go back to the console (Help --> Debug window --> console tab) and type in:
 
@@ -53,7 +53,7 @@ Once reopen the wallet, go to the Masternode tab and press Update.
 
 Eensure your MN appears, click Update if it does not appear. Now cointinue to the next section of this guide.
 
-## To Install the StrongHands-Masternode on VPS Server
+## To Install the Poseidon Quark-Masternode on VPS Server
 
 Go through setting up the wallet and MN infomration on your computer. Then once that is ready to go, continue on to this guide. 
 
@@ -93,12 +93,12 @@ Will stop your masternode and wil automatically restart
 `poseidon-cli stop`
 
 
-This will allow you to edit your masternode's wallet (not your computer's wallet). You can also you this command after the setup to fix if you input the incorrect MN key. Once open and done making changes, press Ctrl + o then Enter to save changes, then Ctrl + x to exit. Then run shmn-cli stop to restart the MN.
+This will allow you to edit your masternode's wallet (not your computer's wallet). You can also you this command after the setup to fix if you input the incorrect MN key. Once open and done making changes, press Ctrl + o then Enter to save changes, then Ctrl + x to exit. Then run poseidon-cli stop to restart the MN.
 
 `nano ~/.poseidon/poseidon.conf`
 
 
-This is where your StrongHands-Masternode program files is saved to
+This is where your Poseidon Quark-Masternode program files is saved to
 
 `cd /usr/local/bin`
 
@@ -108,7 +108,7 @@ Return to root home folder
 `cd ~`
 
 
-This will give you access to the folder of StrongHands-Masternode files. Notice the period in front of the folder. If your are in the home folder and do **ls** command, it will not show the folder. Period means hidden. Correct command to display this folder in the home folder is **ls -al**
+This will give you access to the folder of Poseidon Quark-Masternode files. Notice the period in front of the folder. If your are in the home folder and do **ls** command, it will not show the folder. Period means hidden. Correct command to display this folder in the home folder is **ls -al**
 
 `cd ~/.poseidon`
 

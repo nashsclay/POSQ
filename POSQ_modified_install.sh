@@ -1,11 +1,11 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='poseidon.conf'
-CONFIGFOLDER='/root/.poseidon'
-COIN_DAEMON='poseidond'
-COIN_CLI='poseidon-cli'
-COIN_TX='poseidon-tx'
+CONFIG_FILE='posq.conf'
+CONFIGFOLDER='/root/.POSQ'
+COIN_DAEMON='poseqd'
+COIN_CLI='posq-cli'
+COIN_TX='posq-tx'
 COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://github.com/nashsclay/POSQ/releases/download/v2.0/posq_mn_files.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
@@ -119,34 +119,21 @@ maxconnections=256
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-addnode=192.243.103.201:5510
-addnode=192.243.103.202:5510
-addnode=80.111.218.44:5510
-addnode=192.243.101.179:5510
-addnode=192.243.100.6:5510
-addnode=192.243.100.65:5510
-addnode=192.243.102.48:5510
-addnode=165.227.226.176:5510
-addnode=159.89.19.161:5510
-addnode=185.248.140.13:5510
-addnode=84.200.24.120:5510
-addnode=37.228.224.37:5510
-addnode=91.39.113.78:5510
-addnode=196.52.39.22:5510
-addnode=140.82.61.65:5510
-addnode=91.39.113.78:5510
-addnode=63.140.89.8:5510
-addnode=203.220.144.229:5510
-addnode=216.117.128.40:5510
-addnode=18.222.88.154:5510
-addnode=173.30.75.11:5510
-addnode=110.232.112.81:5510
-addnode=85.15.190.106:5510
-addnode=82.142.153.162:5510
-addnode=45.77.148.21:5510
-addnode=173.239.218.20:5510
-addnode=159.65.20.209:5510
-addnode=172.245.185.184:5510
+addnode=107.181.176.107 
+addnode=91.39.118.188
+addnode=144.202.23.61 
+addnode=196.52.2.40 
+addnode=173.255.231.7 
+addnode=45.76.226.246 
+addnode=45.79.162.189
+addnode=51.38.32.242
+addnode=162.212.157.146
+addnode=144.202.21.47
+addnode=94.244.2.126
+addnode=213.251.169.91
+addnode=24.132.21.97
+addnode=95.179.149.180
+addnode=45.63.116.177
 EOF
 }
 

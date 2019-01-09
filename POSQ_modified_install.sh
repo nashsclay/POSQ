@@ -2,7 +2,7 @@
 
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='posq.conf'
-CONFIGFOLDER='/root/.POSQ'
+CONFIGFOLDER='/root/.posq'
 COIN_DAEMON='posqd'
 COIN_CLI='posq-cli'
 COIN_TX='posq-tx'

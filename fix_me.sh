@@ -8,20 +8,18 @@ echo
 
 cd ~
 
-wget https://github.com/nashsclay/POSQ/releases/download/v2.0/posq_mn_files.tar.gz
-sudo tar -xvf posq_mn_files.tar.gz
-sudo mv -f poseidon-cli /usr/local/bin
-sudo mv -f poseidond /usr/local/bin
-sudo mv -f poseidon-tx /usr/local/bin
-sudo rm posq_mn_files.tar.gz
+wget https://github.com/nashsclay/POSQ/raw/master/posq-bootstrap.zip
+sudo unzip posq-bootstrap.zip
 echo "! Restarting POSQ Masternode !"
-cd ~/.poseidon
-sudo rm db.log debug.log poseidond.pid
+cd ~/.posq
+sudo rm db.log debug.log posq.pid
 sudo rm -R backups/
 sudo rm -R blocks/
 sudo rm -R chainstate/
 sudo rm -R database/
 sudo rm -R sporks/
 sudo rm -R zerocoin/
-sudo poseidon-cli stop
+mv ..peers.dat .
+mv ..blocks/ .
+sudo posq-cli stop
 echo "Masternode restarted"

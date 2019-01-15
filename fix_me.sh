@@ -20,6 +20,5 @@ sudo rm -R database/
 sudo rm -R sporks/
 sudo rm -R zerocoin/
 cp -i ../peers.dat .
-cp -i ../blocks/ .
 sudo posq-cli stop
 echo "Masternode restarted"

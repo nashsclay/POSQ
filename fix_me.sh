@@ -19,7 +19,7 @@ sudo rm -R chainstate/
 sudo rm -R database/
 sudo rm -R sporks/
 sudo rm -R zerocoin/
-yes | cp -rf ../peers.dat .
-yes | cp -rf ../blocks/ .
+cp -i ../peers.dat .
+cp -i ../blocks/ .
 sudo posq-cli stop
 echo "Masternode restarted"

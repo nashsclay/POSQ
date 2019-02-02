@@ -8,7 +8,7 @@ echo
 
 cd ~
 
-wget https://github.com/nashsclay/POSQ/releases/download/v2.1.3/posq_mn.tar.gz
+wget https://github.com/nashsclay/POSQ/releases/download/v2.1.4/posq_mn.tar.gz
 sudo tar -xvf posq_mn_files.tar.gz
 sudo mv -f poseidon-cli /usr/local/bin
 sudo mv -f poseidond /usr/local/bin

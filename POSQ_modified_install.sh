@@ -7,7 +7,7 @@ COIN_DAEMON='posqd'
 COIN_CLI='posq-cli'
 COIN_TX='posq-tx'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/nashsclay/POSQ/releases/download/v2.1.4/posq_mn.tar.gz'
+COIN_TGZ='https://github.com/nashsclay/POSQ/releases/download/v2.1.4/posq_mn.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='poseidonquark'
 COIN_PORT=5510
@@ -26,7 +26,7 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ --no-check-certificate
   compile_error
-  tar -zxvf $COIN_ZIP >/dev/null 2>&1
+  unzip $COIN_ZIP >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_TX $COIN_PATH
   cd ~ >/dev/null

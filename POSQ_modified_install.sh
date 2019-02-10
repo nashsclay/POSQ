@@ -9,7 +9,7 @@ COIN_TX='posq-tx'
 COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://github.com/nashsclay/POSQ/releases/download/v2.1.4/posq_mn.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='poseidonquark'
+COIN_NAME='posq'
 COIN_PORT=5510
 RPC_PORT=5511
 
